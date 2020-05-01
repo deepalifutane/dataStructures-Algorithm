@@ -7,11 +7,11 @@ function solution(A) {
     A.sort();
     var newArr = [];
     newArr.push(A[0])
-    if(A[0] < 0){
+    if(A[A.length-1] > 1000000 || A[A.length-1]<0){
         return 1;
     }else{
         for(var i=0; i<A.length; i++){
-            if(newArr[newArr.length-1] != A[i]){
+            if(newArr[newArr.length-1] != A[i] && A[i] > 0){
                 newArr.push(A[i])
             }
         }
